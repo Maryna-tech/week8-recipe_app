@@ -45,17 +45,15 @@ const finalSearch =(e) =>{
         <h1>Find a Recipe</h1>
         </div>
 
-        <div className='container'>
+      <div className='container'>
           <form onSubmit={finalSearch}>
             <input className='search' onChange={myRecipeSearch} value={mySearch}/>
+            <div className='container'>
+              <button><img src={image} alt='icon'/></button>
+            </div>
           </form>
         </div>
-
-        <div className='container'>
-          <button onClick={finalSearch}>
-            <img src={image} alt='icon'/>
-          </button> 
-        </div>
+  
         {myRecipes.map((element, index)=>(
           <MyRecipesComponents key={index}
           label={element.recipe.label}
